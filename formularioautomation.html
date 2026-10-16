@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Automatización / AI - Manakin Labs</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://cdn.jsdelivr.net https://webhook.n8.manakinlabs.com https://wa.me; frame-src 'self' https://webhook.n8.manakinlabs.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://wa.me; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    
+    <!-- Favicon optimizado -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#0A0E27">
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17717129679"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17717129679');
+    </script>
+</head>
+<body>
+    <!-- Navbar Premium -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/manakinbird.png" alt="Manakin Labs" class="brand-logo">
+                Manakin <span class="brand-highlight">Labs</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="index.html" class="btn btn-primary-custom">
+                            <i class="fas fa-arrow-left me-2"></i>Volver
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section del Formulario -->
+    <section class="form-hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center" data-aos="fade-up">
+                    <div class="form-hero-content">
+                        <div class="form-badge mb-4">
+                            <i class="fas fa-robot me-2"></i> Automatización & IA
+                        </div>
+                        <h1 class="form-title">Automatiza tus <span class="gradient-text">Procesos</span></h1>
+                        <p class="form-subtitle">Cuéntanos sobre el proceso que deseas automatizar y transformaremos tu idea en una solución inteligente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario Section -->
+    <section class="form-section-container py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <form id="automationForm" class="modern-form" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <!-- Sección 1: Datos de Contacto -->
+                        <div class="form-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="form-card-header">
+                                <div class="form-card-icon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="form-card-title">Información de Contacto</h3>
+                                    <p class="form-card-subtitle">Datos básicos para poder comunicarnos contigo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Nombre Completo <span class="text-danger">*</span></label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" class="form-control-modern" name="nombreCompleto" required placeholder="Tu nombre completo">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Email <span class="text-danger">*</span></label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-envelope"></i>
+                                            <input type="email" class="form-control-modern" name="email" required placeholder="tu@email.com">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Teléfono</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-phone"></i>
+                                            <input type="tel" class="form-control-modern" name="telefono" placeholder="+506 8888-8888">
+                                        </div>
+                                        <small class="form-text-modern">Incluye código de país</small>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Área o Departamento <span class="text-danger">*</span></label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                            <select class="form-control-modern" name="area" required>
+                                                <option value="">Selecciona tu área</option>
+                                                <option value="ventas">Ventas</option>
+                                                <option value="finanzas">Finanzas</option>
+                                                <option value="recursos-humanos">Recursos Humanos</option>
+                                                <option value="ti">Tecnología (TI)</option>
+                                                <option value="operaciones">Operaciones</option>
+                                                <option value="marketing">Marketing</option>
+                                                <option value="administracion">Administración</option>
+                                                <option value="produccion">Producción</option>
+                                                <option value="otro">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 2: Proceso Actual -->
+                        <div class="form-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="form-card-header">
+                                <div class="form-card-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div>
+                                    <h3 class="form-card-title">Descripción del Proceso</h3>
+                                    <p class="form-card-subtitle">Cuéntanos sobre el proceso que deseas automatizar</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card-body">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <label class="form-label-modern">Nombre del Proceso <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control-modern" name="nombreProceso" required placeholder="Ej: Generar reporte semanal de ventas">
+                                        <small class="form-text-modern">Un nombre corto y descriptivo</small>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <label class="form-label-modern">Descripción del Proceso <span class="text-danger">*</span></label>
+                                        <textarea class="form-control-modern" name="descripcionProceso" rows="5" required placeholder="Describe paso a paso cómo realizas esta tarea actualmente..."></textarea>
+                                        <small class="form-text-modern">Explica detalladamente cada paso del proceso actual</small>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Frecuencia <span class="text-danger">*</span></label>
+                                        <select class="form-control-modern" name="frecuencia" required>
+                                            <option value="">Selecciona frecuencia</option>
+                                            <option value="diario">Diario</option>
+                                            <option value="semanal">Semanal</option>
+                                            <option value="mensual">Mensual</option>
+                                            <option value="bajo-demanda">Bajo demanda</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Duración Actual <span class="text-danger">*</span></label>
+                                        <select class="form-control-modern" name="duracion" required>
+                                            <option value="">Selecciona duración</option>
+                                            <option value="menos-5-min">Menos de 5 minutos</option>
+                                            <option value="5-15-min">5 a 15 minutos</option>
+                                            <option value="15-30-min">15 a 30 minutos</option>
+                                            <option value="mas-30-min">Más de 30 minutos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 3: Problemas Actuales -->
+                        <div class="form-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="form-card-header">
+                                <div class="form-card-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="form-card-title">Problemas Actuales</h3>
+                                    <p class="form-card-subtitle">¿Qué te motiva a automatizar este proceso?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card-body">
+                                <label class="form-label-modern mb-3">Principales Problemas <span class="text-danger">*</span></label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="problemas[]" value="consume-tiempo">
+                                        <div class="checkbox-card-content">
+                                            <i class="fas fa-clock"></i>
+                                            <span>Consume mucho tiempo</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="problemas[]" value="errores-humanos">
+                                        <div class="checkbox-card-content">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                            <span>Errores humanos frecuentes</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="problemas[]" value="varias-personas">
+                                        <div class="checkbox-card-content">
+                                            <i class="fas fa-users"></i>
+                                            <span>Requiere varias personas</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="checkbox-card">
+                                        <input type="checkbox" name="problemas[]" value="dificil-seguimiento">
+                                        <div class="checkbox-card-content">
+                                            <i class="fas fa-tasks"></i>
+                                            <span>Difícil de dar seguimiento</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <label class="form-label-modern">Impacto de No Automatizar</label>
+                                    <textarea class="form-control-modern" name="impactoNoAutomatizar" rows="3" placeholder="¿Qué problemas causa no tener este proceso automatizado?"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 4: Objetivo -->
+                        <div class="form-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="form-card-header">
+                                <div class="form-card-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div>
+                                    <h3 class="form-card-title">Objetivo de la Automatización</h3>
+                                    <p class="form-card-subtitle">¿Qué esperas lograr con la automatización?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card-body">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <label class="form-label-modern">Resultado Esperado <span class="text-danger">*</span></label>
+                                        <textarea class="form-control-modern" name="resultadoEsperado" rows="4" required placeholder="Describe qué quieres que haga el sistema automáticamente..."></textarea>
+                                        <small class="form-text-modern">Sé específico sobre lo que debe lograr la automatización</small>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <label class="form-label-modern mb-3">Nivel de Prioridad <span class="text-danger">*</span></label>
+                                        <div class="radio-group">
+                                            <label class="radio-card">
+                                                <input type="radio" name="prioridad" value="alta" required>
+                                                <div class="radio-card-content">
+                                                    <i class="fas fa-fire text-danger"></i>
+                                                    <div>
+                                                        <strong>Alta</strong>
+                                                        <small>Necesario de inmediato</small>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            
+                                            <label class="radio-card">
+                                                <input type="radio" name="prioridad" value="media" required>
+                                                <div class="radio-card-content">
+                                                    <i class="fas fa-flame text-warning"></i>
+                                                    <div>
+                                                        <strong>Media</strong>
+                                                        <small>Importante pero puede esperar</small>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            
+                                            <label class="radio-card">
+                                                <input type="radio" name="prioridad" value="baja" required>
+                                                <div class="radio-card-content">
+                                                    <i class="fas fa-seedling text-success"></i>
+                                                    <div>
+                                                        <strong>Baja</strong>
+                                                        <small>Sería útil, no urgente</small>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 5: Entradas y Salidas -->
+                        <div class="form-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="form-card-header">
+                                <div class="form-card-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="form-card-title">Entradas y Salidas</h3>
+                                    <p class="form-card-subtitle">Datos que usa y resultados que debe generar</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card-body">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <label class="form-label-modern">Información de Entrada <span class="text-danger">*</span></label>
+                                        <textarea class="form-control-modern" name="informacionUsa" rows="4" required placeholder="Ej: Archivo Excel con ventas, datos de clientes de la base de datos..."></textarea>
+                                        <small class="form-text-modern">¿Qué datos, archivos o información necesitas para este proceso?</small>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <label class="form-label-modern">Resultado Final Esperado <span class="text-danger">*</span></label>
+                                        <textarea class="form-control-modern" name="resultadoFinal" rows="4" required placeholder="Ej: Reporte en PDF enviado por correo a lista de distribución..."></textarea>
+                                        <small class="form-text-modern">¿Qué debe producir la automatización al final?</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 6: Aprobación -->
+                        <div class="form-card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="form-card-header">
+                                <div class="form-card-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="form-card-title">Aprobación y Seguimiento</h3>
+                                    <p class="form-card-subtitle">Información para el proceso de implementación</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-card-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Persona que Aprueba <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control-modern" name="personaAprueba" required placeholder="Nombre y cargo">
+                                        <small class="form-text-modern">Quien autoriza esta automatización</small>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label-modern">Contacto para Seguimiento <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control-modern" name="contactoSeguimiento" required placeholder="Email o teléfono">
+                                        <small class="form-text-modern">Para el seguimiento del proyecto</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Acción -->
+                        <div class="form-actions" data-aos="fade-up" data-aos-delay="700">
+                            <button type="reset" class="btn btn-reset">
+                                <i class="fas fa-undo me-2"></i> Limpiar Formulario
+                            </button>
+                            <button type="submit" class="btn btn-submit">
+                                <i class="fas fa-paper-plane me-2"></i> Enviar Solicitud
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/50670142848?text=Hola%2C%20me%20gustaría%20recibir%20asesoría%20sobre%20automatización." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+        
+        // Form Validation & Submit
+        document.getElementById('automationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validar checkboxes de problemas
+            const problemasChecked = document.querySelectorAll('input[name="problemas[]"]:checked');
+            if (problemasChecked.length === 0) {
+                alert('Por favor selecciona al menos un problema principal');
+                return;
+            }
+            
+            // Recolectar datos del formulario
+            const formData = new FormData(this);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                if (key.includes('[]')) {
+                    const cleanKey = key.replace('[]', '');
+                    if (!data[cleanKey]) data[cleanKey] = [];
+                    data[cleanKey].push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Crear mensaje para WhatsApp
+            const mensaje = `*🤖 Nueva Solicitud de Automatización - Manakin Labs*\n\n` +
+                          `*👤 Contacto:*\n` +
+                          `Nombre: ${data.nombreCompleto}\n` +
+                          `Email: ${data.email}\n` +
+                          `Teléfono: ${data.telefono || 'No especificado'}\n` +
+                          `Área: ${data.area}\n\n` +
+                          `*⚙️ Proceso:*\n` +
+                          `Nombre: ${data.nombreProceso}\n` +
+                          `Frecuencia: ${data.frecuencia}\n` +
+                          `Duración: ${data.duracion}\n\n` +
+                          `*📋 Descripción:*\n${data.descripcionProceso.substring(0, 200)}...\n\n` +
+                          `*🎯 Prioridad:* ${data.prioridad.toUpperCase()}\n\n` +
+                          `*✅ Resultado Esperado:*\n${data.resultadoEsperado.substring(0, 200)}...`;
+            
+            // Abrir WhatsApp
+            const whatsappURL = `https://wa.me/50670142848?text=${encodeURIComponent(mensaje)}`;
+            window.open(whatsappURL, '_blank');
+            
+            // Mostrar confirmación
+            alert('¡Gracias! Tu solicitud ha sido procesada. Te redirigimos a WhatsApp para completar el envío.');
+            
+            // Limpiar formulario
+            setTimeout(() => {
+                this.reset();
+            }, 2000);
+        });
+        
+        // Smooth scroll para navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

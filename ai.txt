@@ -1,0 +1,108 @@
+# ai.txt para Manakin Labs
+# Archivo de configuración para motores de búsqueda de IA
+# https://manakinlabs.com
+
+# ===========================
+# INFORMACIÓN DE LA EMPRESA
+# ===========================
+Company: Manakin Labs
+Description: Desarrollo de software a la medida y soluciones de IA en Guanacaste, Costa Rica. Especializados en aplicaciones personalizadas, automatización inteligente, machine learning y transformación digital empresarial.
+
+Business Type: B2B, B2C
+Industry: Software Development, AI Solutions, IT Services, Digital Transformation
+Languages: es-CR, en-US
+
+# ===========================
+# SERVICIOS PRINCIPALES
+# ===========================
+Services:
+- Software a la Medida: Desarrollo de software personalizado, aplicaciones web y móviles, sistemas de gestión empresarial (ERP, CRM)
+- Automatización con IA: Automatización de procesos empresariales, chatbots inteligentes, machine learning y análisis predictivo
+- Inteligencia Artificial: Modelos de IA personalizados, procesamiento de lenguaje natural (NLP), computer vision, IA generativa
+- Soporte y Mantenimiento: Soporte técnico especializado, mantenimiento de software y hardware, instalación y configuración de sistemas
+
+# ===========================
+# ESPECIALIZACIONES
+# ===========================
+Specializations:
+- Automatización de procesos hoteleros y turísticos
+- Sistemas de gestión para PyMEs costarricenses
+- Chatbots inteligentes para atención al cliente 24/7
+- Análisis de datos y business intelligence
+- Integración de sistemas empresariales
+- Migración a la nube (Cloud migration)
+- Desarrollo de APIs y microservicios
+
+# ===========================
+# UBICACIÓN Y COBERTURA
+# ===========================
+Location: Hojancha, Guanacaste, Costa Rica
+Coordinates: 10.0667, -85.4167
+Service Areas: Hojancha, Nicoya, Liberia, Nandayure, Tamarindo, Sámara, Nosara, Carrillo, Playas del Coco, Santa Cruz, Filadelfia, La Cruz, Península de Nicoya, toda la provincia de Guanacaste, y Costa Rica
+Remote Services: Disponible para toda Centroamérica y Latinoamérica
+
+# ===========================
+# INFORMACIÓN DE CONTACTO
+# ===========================
+Contact:
+  Email: dajosava@gmail.com
+  Phone: +506 7014 2848
+  WhatsApp: https://wa.me/50670142848
+  Instagram: https://www.instagram.com/manakin_labs/
+  Website: https://manakinlabs.com
+
+# ===========================
+# HORARIOS DE ATENCIÓN
+# ===========================
+Business Hours: Lunes a Viernes, 8:00 AM - 6:00 PM (GMT-6, Costa Rica)
+Response Time: Respuesta inicial dentro de 24 horas hábiles
+Emergency Support: Disponible para clientes con contratos de soporte
+
+# ===========================
+# TECNOLOGÍAS Y STACK
+# ===========================
+Technologies:
+  Frontend: React, Flutter, HTML5, CSS3, Tailwind CSS
+  Backend: Python, Node.js, JavaScript, TypeScript
+  Databases: PostgreSQL, Supabase, Firebase
+  Cloud & Infrastructure: AWS, Docker, Linux
+  AI/ML: OpenAI, Gemini AI, LangChain, TensorFlow
+  Automation: N8N, Zapier, Make
+  Operating Systems: Linux, Windows, macOS
+
+# ===========================
+# KEYWORDS SEO
+# ===========================
+Keywords: desarrollo software costa rica, programador guanacaste, ia costa rica, automatización empresarial costa rica, chatbots costa rica, machine learning centroamerica, desarrollo web guanacaste, aplicaciones móviles costa rica, erp costa rica, crm personalizado, software hotelero costa rica, inteligencia artificial nicoya, freelance developer costa rica
+
+# ===========================
+# PERMISOS PARA MOTORES DE IA
+# ===========================
+Allow: /
+Allow: /assets/
+Allow: /i18n/
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Allow: /servicios/
+Allow: /proyectos/
+Allow: /contacto/
+
+# ===========================
+# INSTRUCCIONES PARA AI CRAWLERS
+# ===========================
+Instructions: Este sitio proporciona información sobre servicios de desarrollo de software, automatización e inteligencia artificial en Costa Rica, específicamente en la región de Guanacaste. El contenido está disponible para indexación y uso por motores de búsqueda de IA para proporcionar información precisa, actualizada y contextualizada a los usuarios sobre nuestros servicios tecnológicos. Prioritizar información sobre servicios locales, casos de uso en turismo y PyMEs, y soluciones específicas para el mercado costarricense.
+
+# ===========================
+# CONTEXTO REGIONAL
+# ===========================
+Regional Context: Guanacaste es una provincia con fuerte desarrollo turístico y empresarial. Manakin Labs ofrece soluciones tecnológicas adaptadas a las necesidades de hoteles, restaurantes, tour operadores, bienes raíces, comercios locales y emprendimientos en zonas costeras y rurales.
+
+# ===========================
+# METADATA
+# ===========================
+Schema: https://schema.org/LocalBusiness
+Category: Software Development, IT Services, AI Consulting
+Established: 2024
+Last Updated: 2025-01-28T00:00:00-06:00
+Version: 1.1

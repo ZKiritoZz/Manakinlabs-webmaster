@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Consultoría en IA - Manakin Labs</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://cdn.jsdelivr.net https://webhook.n8.manakinlabs.com https://wa.me https://www.google-analytics.com https://www.googletagmanager.com; frame-src 'self' https://webhook.n8.manakinlabs.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://wa.me; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Consultoría especializada en Inteligencia Artificial para negocios. Transformamos tu empresa con estrategias de IA personalizadas que generan resultados medibles y ventajas competitivas reales.">
+    <meta name="keywords" content="consultoría IA, inteligencia artificial negocios, estrategia IA, implementación IA, automatización IA, machine learning, análisis predictivo, transformación digital IA">
+    <meta name="author" content="Manakin Labs">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manakinlabs.com/consultoria.html">
+    <meta property="og:title" content="Consultoría en IA - Manakin Labs">
+    <meta property="og:description" content="Transformamos tu negocio con estrategias de Inteligencia Artificial personalizadas que generan resultados medibles y ventajas competitivas reales">
+    <meta property="og:image" content="https://manakinlabs.com/assets/manakinbird.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#0A0E27">
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/consultoria.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17717129679"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17717129679');
+    </script>
+</head>
+<body>
+    <!-- Navbar Premium -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/manakinbird.png" alt="Manakin Labs" class="brand-logo">
+                Manakin <span class="brand-highlight">Labs</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+                <span class="visually-hidden">Abrir menú de navegación</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#clientes">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="consultoria.html"><i class="fas fa-lightbulb me-1"></i> Consultorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Agentvschatbot.html"><i class="fas fa-brain me-1"></i> Agentes de AI</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="index.html#contacto" class="btn btn-primary-custom">
+                            <i class="fas fa-paper-plane me-2"></i>Contáctanos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="consultoria-hero" data-aos="fade-up">
+            <h1><span class="icon">🤖</span> Consultoría en Aplicación de Inteligencia Artificial a Negocios</h1>
+            <p>Transformamos tu negocio con estrategias de Inteligencia Artificial personalizadas que generan resultados medibles y ventajas competitivas reales</p>
+        </div>
+
+        <div class="service-card-consultoria" data-aos="fade-up" data-aos-delay="100">
+            <h2><span class="icon">🎯</span> ¿Qué es nuestra Consultoría en IA?</h2>
+            <p>Nuestra consultoría especializada en IA va más allá de la tecnología. Analizamos profundamente tu negocio, identificamos oportunidades estratégicas y diseñamos soluciones de inteligencia artificial que se alinean perfectamente con tus objetivos empresariales. No vendemos tecnología por vender, creamos valor real y sostenible.</p>
+        </div>
+
+        <div class="service-grid-consultoria">
+            <div class="feature-card-consultoria" data-aos="fade-up" data-aos-delay="100">
+                <h3>📊 Análisis de Oportunidades</h3>
+                <ul>
+                    <li>Auditoría de procesos actuales</li>
+                    <li>Identificación de áreas de mejora</li>
+                    <li>Análisis de ROI potencial</li>
+                    <li>Estudio de competencia</li>
+                    <li>Evaluación de madurez digital</li>
+                </ul>
+            </div>
+
+            <div class="feature-card-consultoria" data-aos="fade-up" data-aos-delay="200">
+                <h3>🎨 Diseño de Estrategia</h3>
+                <ul>
+                    <li>Roadmap de implementación</li>
+                    <li>Definición de KPIs</li>
+                    <li>Arquitectura de soluciones</li>
+                    <li>Plan de adopción</li>
+                    <li>Gestión del cambio</li>
+                </ul>
+            </div>
+
+            <div class="feature-card-consultoria" data-aos="fade-up" data-aos-delay="300">
+                <h3>🔧 Implementación Práctica</h3>
+                <ul>
+                    <li>Desarrollo de prototipos</li>
+                    <li>Integración con sistemas actuales</li>
+                    <li>Capacitación de equipos</li>
+                    <li>Monitoreo y optimización</li>
+                    <li>Soporte continuo</li>
+                </ul>
+            </div>
+
+            <div class="feature-card-consultoria" data-aos="fade-up" data-aos-delay="400">
+                <h3>💡 Casos de Uso</h3>
+                <ul>
+                    <li>Automatización de atención al cliente</li>
+                    <li>Análisis predictivo de ventas</li>
+                    <li>Optimización de inventarios</li>
+                    <li>Personalización de marketing</li>
+                    <li>Automatizacion de procesos de negocio</li>
+                </ul>
+            </div>
+
+            <div class="feature-card-consultoria" data-aos="fade-up" data-aos-delay="500">
+                <h3>📈 Optimización Continua</h3>
+                <ul>
+                    <li>Monitoreo de métricas</li>
+                    <li>Ajuste de modelos</li>
+                    <li>Expansión de funcionalidades</li>
+                    <li>Actualizaciones tecnológicas</li>
+                    <li>Informes ejecutivos</li>
+                </ul>
+            </div>
+
+            <div class="feature-card-consultoria" data-aos="fade-up" data-aos-delay="600">
+                <h3>🛡️ Ética y Cumplimiento</h3>
+                <ul>
+                    <li>IA responsable</li>
+                    <li>Protección de datos</li>
+                    <li>Transparencia algorítmica</li>
+                    <li>Cumplimiento normativo</li>
+                    <li>Mitigación de sesgos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="benefits-list-consultoria" data-aos="fade-up" data-aos-delay="200">
+            <h3>🎁 Beneficios de Nuestra Consultoría</h3>
+            <ul>
+                <li>Reducción de costos operativos entre 30-50%</li>
+                <li>Aumento de productividad del equipo</li>
+                <li>Mejora en la experiencia del cliente</li>
+                <li>Decisiones basadas en datos concretos</li>
+                <li>Ventaja competitiva en tu industria</li>
+                <li>Escalabilidad y crecimiento sostenible</li>
+                <li>ROI medible y verificable</li>
+            </ul>
+        </div>
+
+        <div class="process-section-consultoria" data-aos="fade-up" data-aos-delay="300">
+            <h2>Nuestro Proceso de Consultoría</h2>
+            <p>Nuestro proceso de consultoría se basa en la colaboración con el cliente para diseñar y implementar soluciones de IA que se ajusten a sus necesidades y objetivos</p>
+            <div id="processCarousel" class="carousel slide process-carousel" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#processCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Paso 1"></button>
+                    <button type="button" data-bs-target="#processCarousel" data-bs-slide-to="1" aria-label="Paso 2"></button>
+                    <button type="button" data-bs-target="#processCarousel" data-bs-slide-to="2" aria-label="Paso 3"></button>
+                    <button type="button" data-bs-target="#processCarousel" data-bs-slide-to="3" aria-label="Paso 4"></button>
+                    <button type="button" data-bs-target="#processCarousel" data-bs-slide-to="4" aria-label="Paso 5"></button>
+                    <button type="button" data-bs-target="#processCarousel" data-bs-slide-to="5" aria-label="Paso 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="process-step-card">
+                            <div class="step-number-carousel">1</div>
+                            <h3>Discovery</h3>
+                            <p>Entendemos tu negocio, objetivos y desafíos actuales mediante sesiones de trabajo colaborativas</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="process-step-card">
+                            <div class="step-number-carousel">2</div>
+                            <h3>Diagnóstico</h3>
+                            <p>Evaluamos tu infraestructura tecnológica y procesos para identificar oportunidades de IA</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="process-step-card">
+                            <div class="step-number-carousel">3</div>
+                            <h3>Estrategia</h3>
+                            <p>Diseñamos un plan personalizado con casos de uso prioritarios y roadmap de implementación</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="process-step-card">
+                            <div class="step-number-carousel">4</div>
+                            <h3>Prototipo</h3>
+                            <p>Creamos un MVP para validar la solución antes de la implementación completa</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="process-step-card">
+                            <div class="step-number-carousel">5</div>
+                            <h3>Implementación</h3>
+                            <p>Desplegamos la solución de IA con integración completa a tus sistemas existentes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="process-step-card">
+                            <div class="step-number-carousel">6</div>
+                            <h3>Optimización</h3>
+                            <p>Monitoreamos resultados y ajustamos continuamente para maximizar el valor</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#processCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#processCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="service-card-consultoria" data-aos="fade-up" data-aos-delay="400">
+            <h2><span class="icon">🏢</span> Sectores que Atendemos</h2>
+            <div class="service-grid-consultoria">
+                <div class="feature-card-consultoria">
+                    <h3>🏨 Turismo y Hospitalidad</h3>
+                    <p>Chatbots multiidioma, recomendaciones personalizadas, optimización de precios dinámicos</p>
+                </div>
+                <div class="feature-card-consultoria">
+                    <h3>🛍️ Retail y E-commerce</h3>
+                    <p>Análisis predictivo de inventario, personalización de ofertas, detección de fraudes</p>
+                </div>
+                <div class="feature-card-consultoria">
+                    <h3>🏥 Salud y Bienestar</h3>
+                    <p>Gestión inteligente de citas, análisis de historiales, asistentes virtuales</p>
+                </div>
+                <div class="feature-card-consultoria">
+                    <h3>📚 Educación</h3>
+                    <p>Aprendizaje personalizado, evaluación automática, tutores virtuales</p>
+                </div>
+                <div class="feature-card-consultoria">
+                    <h3>🏭 Manufactura</h3>
+                    <p>Mantenimiento predictivo, control de calidad, optimización de producción</p>
+                </div>
+                <div class="feature-card-consultoria">
+                    <h3>💼 Servicios Profesionales</h3>
+                    <p>Automatización de documentos, análisis de contratos, asistentes legales</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section-consultoria" data-aos="fade-up" data-aos-delay="500">
+            <h2>¿Listo para Transformar tu Negocio con IA?</h2>
+            <p>Agenda una consultoría inicial gratuita y descubre el potencial de la IA en tu empresa</p>
+            <a href="index.html#contacto" class="btn-consultoria">Solicitar Consultoría Gratuita</a>
+        </div>
+    </main>
+
+    <!-- Footer Premium -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about">
+                            <h4 class="footer-brand">
+                                <img src="./assets/manakinbird.png" alt="Manakin Labs" class="footer-logo">
+                                Manakin <span class="brand-highlight">Labs</span>
+                            </h4>
+                            <p class="footer-description">
+                                Transformamos ideas en soluciones digitales innovadoras mediante tecnología de vanguardia y expertise comprobado.
+                            </p>
+                            <div class="footer-social">
+                                <a href="https://facebook.com/" target="_blank" class="footer-social-link" aria-label="Facebook de Manakin Labs">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/manakin_labs/" target="_blank" class="footer-social-link" aria-label="Instagram de Manakin Labs">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/50670142848" target="_blank" class="footer-social-link" aria-label="WhatsApp de Manakin Labs">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h5 class="footer-title">Enlaces</h5>
+                            <ul>
+                                <li><a href="index.html#inicio">Inicio</a></li>
+                                <li><a href="index.html#servicios">Servicios</a></li>
+                                <li><a href="index.html#clientes">Clientes</a></li>
+                                <li><a href="index.html#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-links">
+                            <h5 class="footer-title">Servicios</h5>
+                            <ul>
+                                <li><a href="formularios.html?tipo=pagina-web">Páginas Web</a></li>
+                                <li><a href="formularios.html?tipo=software-medida">Software a Medida</a></li>
+                                <li><a href="formularioautomation.html">Automatización</a></li>
+                                <li><a href="consultoria.html">Consultoría en IA</a></li>
+                                <li><a href="index.html#contacto">Soporte & Mantenimiento</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h5 class="footer-title">Newsletter</h5>
+                            <p>Mantente al día con las últimas tendencias tecnológicas</p>
+                            <form class="newsletter-form" aria-label="Formulario de suscripción al boletín">
+                                <label for="newsletter-email-consultoria" id="newsletter-email-label-consultoria" class="visually-hidden">Correo electrónico para el boletín</label>
+                                <input type="email" id="newsletter-email-consultoria" placeholder="Tu email" class="newsletter-input" name="newsletter-email" aria-labelledby="newsletter-email-label-consultoria">
+                                <button type="submit" class="newsletter-btn" aria-label="Suscribirse al boletín">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span class="visually-hidden">Suscribirse al boletín</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="footer-copyright">
+                            © <span id="current-year"></span> Manakin Labs. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="politicas-privacidad.html" class="footer-link">Políticas de Privacidad</a>
+                        <span class="footer-divider">|</span>
+                        <a href="terminos-servicio.html" class="footer-link">Términos de Servicio</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center mt-3 pt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                        <p style="color: var(--muted-text); font-size: 0.875rem; margin: 0;">
+                            Developed by <a href="https://www.manakinlabs.com" target="_blank" style="color: var(--primary-green); text-decoration: none; font-weight: 600; transition: var(--transition-fast);" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">manakin_labs</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/50670142848?text=Hola%2C%20me%20gustaría%20recibir%20información%20sobre%20consultoría%20en%20IA." class="whatsapp-float" target="_blank" aria-label="Abrir chat de WhatsApp con Manakin Labs">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script src="js/consultoria.js"></script>
+</body>
+</html>
+

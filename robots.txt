@@ -1,0 +1,163 @@
+# robots.txt para Manakin Labs
+# https://manakinlabs.com
+# Última actualización: 2025-01-28
+
+# ===========================
+# REGLAS GENERALES
+# ===========================
+User-agent: *
+Allow: /
+
+# Permitir acceso a recursos estáticos
+Allow: /assets/
+Allow: /i18n/
+Allow: /servicios/
+Allow: /proyectos/
+Allow: /contacto/
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Allow: /*.ico
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+Allow: /*.svg
+Allow: /*.woff
+Allow: /*.woff2
+
+# Bloquear archivos sensibles (precaución adicional)
+Disallow: /.env
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.DS_Store
+Disallow: /config/
+Disallow: /*.log
+
+# ===========================
+# MOTORES DE BÚSQUEDA PRINCIPALES
+# ===========================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ===========================
+# BOTS DE INTELIGENCIA ARTIFICIAL
+# ===========================
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (usado por varios modelos de IA)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Amazon (Alexa)
+User-agent: Amazonbot
+Allow: /
+
+# Bytedance (TikTok, usados para entrenar modelos)
+User-agent: Bytespider
+Allow: /
+
+# Diffbot (extracción de datos estructurados)
+User-agent: Diffbot
+Allow: /
+
+# Anthropic Claude Crawler específico
+User-agent: ClaudeBot
+Allow: /
+
+# ===========================
+# BOTS QUE PODRÍAS BLOQUEAR (OPCIONALES)
+# ===========================
+# Si prefieres bloquear ciertos crawlers de scraping agresivo, descomenta:
+
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
+
+# User-agent: MJ12bot
+# Disallow: /
+
+# User-agent: DotBot
+# Disallow: /
+
+# ===========================
+# SITEMAP
+# ===========================
+Sitemap: https://manakinlabs.com/sitemap.xml
+
+# ===========================
+# ARCHIVO AI.TXT
+# ===========================
+# Información adicional para motores de IA disponible en:
+# https://manakinlabs.com/ai.txt
+
+# ===========================
+# NOTAS
+# ===========================
+# - Este archivo permite a todos los crawlers acceder al sitio
+# - Se incluyen bots específicos de IA para entrenamiento de modelos
+# - Los archivos sensibles están bloqueados como precaución
+# - Para crawlers de IA se aplica un Crawl-delay mínimo
+# - Consultar ai.txt para información estructurada adicional

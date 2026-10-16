@@ -1,0 +1,577 @@
+/* Estilos de respaldo */
+:root {
+    --dark-bg: #0A0E27;
+    --darker-bg: #060816;
+    --card-bg: rgba(20, 25, 50, 0.8);
+    --primary-green: #00C853;
+    --secondary-green: #69F0AE;
+    --accent-blue: #00B8D4;
+    --white: #FFFFFF;
+    --light-text: #E0E0E0;
+    --muted-text: #9E9E9E;
+    --gradient-primary: linear-gradient(135deg, #00C853 0%, #00B8D4 100%);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 30px rgba(0, 200, 83, 0.3);
+    --transition-normal: all 0.3s ease;
+}
+
+/* Ajuste para el navbar fijo */
+body { 
+    padding-top: 80px !important;
+    background: #0A0E27 !important;
+    background: var(--dark-bg) !important;
+    color: #FFFFFF !important;
+    color: var(--white) !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Asegurar que el main sea visible */
+main.container {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 80px);
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    overflow-x: hidden;
+}
+
+/* Asegurar visibilidad de todos los elementos */
+.consultoria-hero,
+.service-card-consultoria,
+.service-grid-consultoria,
+.feature-card-consultoria,
+.benefits-list-consultoria,
+.process-section-consultoria,
+.process-carousel,
+.cta-section-consultoria {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.consultoria-hero {
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(0, 184, 212, 0.1) 100%);
+    background: rgba(20, 25, 50, 0.8);
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.consultoria-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #00C853 0%, #00B8D4 100%);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #00C853; /* Fallback si no funciona el gradient */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+}
+
+.consultoria-hero p {
+    font-size: 1.2rem;
+    color: #E0E0E0;
+    color: var(--light-text);
+    max-width: 800px;
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+.service-card-consultoria {
+    background: rgba(20, 25, 50, 0.8);
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.service-card-consultoria p {
+    color: #E0E0E0;
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.service-card-consultoria:hover {
+    transform: translateY(-5px);
+    border-color: #00C853;
+    border-color: var(--primary-green);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+}
+
+.service-card-consultoria h2 {
+    color: #00C853;
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.service-card-consultoria .icon {
+    font-size: 1.5em;
+    flex-shrink: 0;
+}
+
+.service-grid-consultoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    align-items: start;
+}
+
+.feature-card-consultoria {
+    background: rgba(20, 25, 50, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 200, 83, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    word-wrap: break-word;
+    min-height: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card-consultoria p {
+    color: #E0E0E0;
+    color: var(--light-text);
+    margin-top: 1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: 0;
+}
+
+.feature-card-consultoria:hover {
+    background: rgba(20, 25, 50, 0.8);
+    border-color: var(--primary-green);
+    transform: translateY(-3px);
+    z-index: 10;
+    box-shadow: 0 8px 30px rgba(0, 200, 83, 0.2);
+}
+
+.feature-card-consultoria h3 {
+    color: #69F0AE;
+    color: var(--secondary-green);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.feature-card-consultoria ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.feature-card-consultoria li {
+    padding: 0.5rem 0;
+    color: #E0E0E0;
+    color: var(--light-text);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+    min-height: auto;
+}
+
+.feature-card-consultoria li:before {
+    content: "✓";
+    color: #00C853;
+    color: var(--primary-green);
+    font-weight: bold;
+    font-size: 1.2em;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.process-section-consultoria {
+    margin: 4rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.process-section-consultoria h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #FFFFFF;
+    color: var(--white);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Estilos para el carrusel del proceso */
+.process-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.process-carousel .carousel-inner {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.process-carousel .carousel-item {
+    min-height: 400px;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(0, 184, 212, 0.1) 100%);
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 200, 83, 0.2);
+    border-radius: 20px;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.process-step-card {
+    text-align: center;
+    padding: 2rem;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.step-number-carousel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #00C853 0%, #00B8D4 100%);
+    background: var(--gradient-primary);
+    color: #FFFFFF;
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 200, 83, 0.3);
+}
+
+.process-step-card h3 {
+    color: #00C853;
+    color: var(--primary-green);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.process-step-card p {
+    color: #E0E0E0;
+    color: var(--light-text);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 1rem;
+}
+
+.process-carousel .carousel-control-prev,
+.process-carousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.process-carousel .carousel-control-prev:hover,
+.process-carousel .carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    z-index: 100;
+}
+
+.process-carousel .carousel-control-prev {
+    left: -25px;
+}
+
+.process-carousel .carousel-control-next {
+    right: -25px;
+}
+
+.process-carousel .carousel-control-prev-icon,
+.process-carousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.process-carousel .carousel-indicators {
+    bottom: -50px;
+    position: relative;
+    z-index: 2;
+}
+
+.process-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.process-carousel .carousel-indicators button.active {
+    background: #00C853;
+    background: var(--primary-green);
+    border-color: #00C853;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .process-carousel .carousel-control-prev {
+        left: 10px;
+    }
+
+    .process-carousel .carousel-control-next {
+        right: 10px;
+    }
+
+    .process-step-card {
+        padding: 1rem;
+    }
+
+    .step-number-carousel {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .process-step-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .process-step-card p {
+        font-size: 1rem;
+    }
+}
+
+.cta-section-consultoria {
+    background: linear-gradient(135deg, #00C853 0%, #00B8D4 100%);
+    background: var(--gradient-primary);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 4rem;
+    box-shadow: 0 0 30px rgba(0, 200, 83, 0.3);
+    box-shadow: var(--shadow-glow);
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.cta-section-consultoria h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    color: var(--white);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+}
+
+.cta-section-consultoria p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+.btn-consultoria {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #FFFFFF;
+    background: var(--white);
+    color: #00C853;
+    color: var(--primary-green);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    transition: var(--transition-normal);
+    border: 2px solid #FFFFFF;
+    border: 2px solid var(--white);
+}
+
+.btn-consultoria:hover {
+    background: transparent;
+    color: #FFFFFF;
+    color: var(--white);
+    transform: scale(1.05);
+    z-index: 10;
+    position: relative;
+}
+
+.benefits-list-consultoria {
+    background: rgba(20, 25, 50, 0.8);
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid #00C853;
+    border-left: 4px solid var(--primary-green);
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.benefits-list-consultoria h3 {
+    color: #00C853;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.benefits-list-consultoria ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.benefits-list-consultoria li {
+    padding: 0.75rem 0;
+    color: #E0E0E0;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+.benefits-list-consultoria li:before {
+    content: "✓";
+    color: #00C853;
+    color: var(--primary-green);
+    font-weight: bold;
+    font-size: 1.3em;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .consultoria-hero {
+        padding: 2rem 1.5rem;
+    }
+
+    .consultoria-hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .consultoria-hero p {
+        font-size: 1rem;
+    }
+
+    .service-card-consultoria {
+        padding: 2rem 1.5rem;
+    }
+
+    .service-card-consultoria h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-grid-consultoria {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-card-consultoria {
+        padding: 1.5rem;
+    }
+
+    .feature-card-consultoria:hover {
+        transform: translateY(-2px);
+    }
+
+    .benefits-list-consultoria {
+        padding: 1.5rem;
+    }
+
+    .process-section-consultoria {
+        margin: 3rem 0;
+    }
+
+    .process-section-consultoria h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .process-carousel .carousel-item {
+        padding: 2rem 1.5rem;
+        min-height: 350px;
+    }
+
+    .process-step-card {
+        padding: 1rem;
+    }
+
+    .cta-section-consultoria {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-section-consultoria h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section-consultoria p {
+        font-size: 1rem;
+    }
+}
+

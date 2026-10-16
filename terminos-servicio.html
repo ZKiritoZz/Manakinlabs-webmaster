@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Términos de Servicio - Manakin Labs</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-Q8wNkFqTRRYZ381gIsTKM2K3X1b4wbtawDeJJfJtuUI=' 'sha256-TyR6IOxHwHQJ3+DYRg5Uy7EE/AEx50o80X7NkGy+lTU=' 'sha256-puQafBKD5KGNykSh3i5m2IBWgS9TkIyzcPY6Z6RLMrQ=' 'sha256-qYt2VaU2jNGMVro/w4jw1rQndPHqVzcsb8yPsnxbCtY=' 'sha256-hUUX/IP5OoG4HjayLAYygnG7htWOiaJb3c+bgMFHW5E=' 'sha256-PTFgla6CTEX+DB4/ZBgBX1ZTrmZlcogTNEP+YrZwJxo=' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://cdn.jsdelivr.net https://webhook.n8.manakinlabs.com https://n8.manakinlabs.com https://wa.me https://www.googletagmanager.com https://www.google-analytics.com; frame-src 'self' https://webhook.n8.manakinlabs.com https://n8.manakinlabs.com; base-uri 'self'; form-action 'self' https://wa.me; worker-src 'self' blob:; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- Favicon optimizado -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#0A0E27">
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Estilos básicos de respaldo */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Fallback si las variables CSS no cargan */
+        :root {
+            --dark-bg: #0A0E27;
+            --card-bg: rgba(20, 25, 50, 0.8);
+            --primary-green: #00C853;
+            --secondary-green: #00B8D4;
+            --white: #FFFFFF;
+            --light-text: #E0E0E0;
+            --muted-text: #9E9E9E;
+            --transition-normal: all 0.3s ease;
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.3);
+            --font-secondary: 'Poppins', sans-serif;
+        }
+        
+        /* Asegurar que el contenedor sea visible */
+        .content-wrapper {
+            display: block !important;
+            visibility: visible !important;
+        }
+        
+        /* Estilos para privacy-section */
+        .privacy-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-normal);
+        }
+        
+        .privacy-section:hover {
+            box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 200, 83, 0.1);
+            border-color: rgba(0, 200, 83, 0.2);
+        }
+        
+        .privacy-section h2 {
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-secondary);
+        }
+        
+        .privacy-section h3 {
+            color: var(--secondary-green);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+        
+        .privacy-section p {
+            color: var(--light-text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-section ul {
+            color: var(--light-text);
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+        
+        .privacy-section strong {
+            color: var(--white);
+        }
+        
+        .privacy-header {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(0, 184, 212, 0.1) 100%);
+            border: 1px solid rgba(0, 200, 83, 0.2);
+            margin-bottom: 3rem;
+        }
+        
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            font-family: var(--font-secondary);
+        }
+        
+        .privacy-header .update-date {
+            color: var(--muted-text);
+            font-size: 0.95rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: var(--transition-normal);
+            box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 200, 83, 0.5);
+            color: var(--white);
+        }
+        
+        .content-wrapper {
+            padding: 140px 0 80px;
+            min-height: 100vh;
+            background: var(--dark-bg);
+        }
+        
+        .contact-box {
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-box p {
+            margin: 0;
+            color: var(--white);
+        }
+        
+        .contact-box a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17717129679"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17717129679');
+    </script>
+</head>
+<body>
+    <!-- Navbar Premium -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/manakinbird.png" alt="Manakin Labs" class="brand-logo">
+                Manakin <span class="brand-highlight">Labs</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="index.html" class="btn btn-primary-custom">
+                            <i class="fas fa-arrow-left me-2"></i>Volver
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Header -->
+                    <div class="privacy-header" data-aos="fade-up">
+                        <h1><i class="fas fa-file-contract me-3"></i>Términos de Servicio</h1>
+                        <p class="update-date">Última actualización: 9 de febrero de 2026</p>
+                    </div>
+
+                    <!-- Sección 1 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="100">
+                        <h2><i class="fas fa-info-circle me-2"></i>1. Aceptación de los Términos</h2>
+                        <p>Al acceder y utilizar los servicios de <strong>Manakin Labs</strong>, usted acepta estar sujeto a estos Términos de Servicio y a todas las leyes y regulaciones aplicables. Si no está de acuerdo con alguno de estos términos, no debe utilizar nuestros servicios.</p>
+                        <p>Estos términos se aplican a todos los usuarios del sitio web, servicios de desarrollo de software, automatización, integraciones con plataformas de terceros (Meta, WhatsApp, Google Workspace) y cualquier otro servicio proporcionado por Manakin Labs.</p>
+                    </div>
+
+                    <!-- Sección 2 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="200">
+                        <h2><i class="fas fa-briefcase me-2"></i>2. Descripción de los Servicios</h2>
+                        <p><strong>Manakin Labs</strong> ofrece los siguientes servicios:</p>
+                        
+                        <h3>Desarrollo de Software a la Medida:</h3>
+                        <ul>
+                            <li>Desarrollo de aplicaciones web y móviles personalizadas</li>
+                            <li>Creación de sistemas de gestión empresarial</li>
+                            <li>Desarrollo de APIs y servicios backend</li>
+                            <li>Integración de sistemas existentes</li>
+                        </ul>
+
+                        <h3>Automatización e Inteligencia Artificial:</h3>
+                        <ul>
+                            <li>Agentes de IA para WhatsApp</li>
+                            <li>Automatización de procesos empresariales</li>
+                            <li>Automatización de redes sociales (Instagram, Facebook)</li>
+                            <li>Integraciones con Google Workspace (Gmail, Calendar, Sheets, Docs)</li>
+                            <li>Chatbots inteligentes y sistemas de procesamiento de lenguaje natural</li>
+                        </ul>
+
+                        <h3>Soporte y Mantenimiento:</h3>
+                        <ul>
+                            <li>Soporte técnico de software y hardware</li>
+                            <li>Mantenimiento preventivo y correctivo</li>
+                            <li>Reinstalaciones de sistemas operativos</li>
+                            <li>Consultorías tecnológicas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 3 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="300">
+                        <h2><i class="fas fa-user-check me-2"></i>3. Uso Aceptable</h2>
+                        <p>Usted se compromete a utilizar nuestros servicios de manera responsable y legal. Está prohibido:</p>
+                        
+                        <ul>
+                            <li>Utilizar nuestros servicios para actividades ilegales o no autorizadas</li>
+                            <li>Violar los derechos de propiedad intelectual de terceros</li>
+                            <li>Intentar acceder no autorizado a sistemas, cuentas o redes</li>
+                            <li>Transmitir virus, malware o código malicioso</li>
+                            <li>Interferir con el funcionamiento de nuestros servicios</li>
+                            <li>Utilizar nuestros servicios para spam, phishing o actividades fraudulentas</li>
+                            <li>Compartir credenciales de acceso con terceros no autorizados</li>
+                            <li>Realizar ingeniería inversa de nuestros productos o servicios</li>
+                        </ul>
+
+                        <div class="contact-box">
+                            <p><strong>Consecuencias del Incumplimiento:</strong> La violación de estos términos puede resultar en la suspensión o terminación inmediata de su acceso a nuestros servicios, sin reembolso.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sección 4 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="400">
+                        <h2><i class="fas fa-handshake me-2"></i>4. Contratos y Acuerdos de Servicio</h2>
+                        
+                        <h3>Propuesta y Aceptación:</h3>
+                        <ul>
+                            <li>Todos los proyectos comienzan con una propuesta detallada que incluye alcance, cronograma y presupuesto</li>
+                            <li>El proyecto se considera aceptado cuando el cliente firma la propuesta o confirma por escrito su aceptación</li>
+                            <li>Las modificaciones al alcance requieren un cambio de orden aprobado por ambas partes</li>
+                        </ul>
+
+                        <h3>Pagos y Facturación:</h3>
+                        <ul>
+                            <li>Los términos de pago se especifican en cada propuesta o contrato</li>
+                            <li>Los pagos pueden requerirse por adelantado, en etapas o según cronograma acordado</li>
+                            <li>Los pagos atrasados pueden resultar en la suspensión del trabajo hasta que se resuelva el pago</li>
+                            <li>Los precios están sujetos a cambios sin previo aviso hasta que se firme un contrato</li>
+                        </ul>
+
+                        <h3>Propiedad Intelectual:</h3>
+                        <ul>
+                            <li>El código fuente y los derechos de propiedad intelectual del software desarrollado se transfieren al cliente una vez completado el pago total del proyecto</li>
+                            <li>Manakin Labs se reserva el derecho de utilizar el proyecto como referencia en su portafolio (con permiso del cliente)</li>
+                            <li>Las herramientas, frameworks y librerías de terceros mantienen sus respectivas licencias</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 5 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="500">
+                        <h2><i class="fas fa-shield-alt me-2"></i>5. Integraciones con Servicios de Terceros</h2>
+                        
+                        <h3>APIs de Terceros:</h3>
+                        <p>Nuestros servicios pueden integrarse con plataformas de terceros como:</p>
+                        <ul>
+                            <li><strong>Meta (Facebook/Instagram):</strong> Sujeto a los términos de servicio y políticas de Meta</li>
+                            <li><strong>WhatsApp Business API:</strong> Sujeto a los términos de servicio de WhatsApp</li>
+                            <li><strong>Google Workspace:</strong> Sujeto a los términos de servicio de Google Cloud Platform y Google APIs</li>
+                            <li><strong>Otras plataformas:</strong> Cualquier integración adicional está sujeta a los términos del proveedor respectivo</li>
+                        </ul>
+
+                        <h3>Responsabilidades del Cliente:</h3>
+                        <ul>
+                            <li>El cliente es responsable de mantener cuentas válidas y autorizadas en las plataformas de terceros</li>
+                            <li>El cliente debe cumplir con los términos de servicio de todas las plataformas integradas</li>
+                            <li>El cliente es responsable de cualquier violación de términos de terceros que resulte del uso de nuestros servicios</li>
+                            <li>El cliente debe proporcionar acceso adecuado y permisos necesarios para las integraciones</li>
+                        </ul>
+
+                        <h3>Limitaciones:</h3>
+                        <ul>
+                            <li>No garantizamos la disponibilidad continua de servicios de terceros</li>
+                            <li>Los cambios en las APIs de terceros pueden requerir actualizaciones adicionales con costo</li>
+                            <li>No somos responsables de interrupciones o cambios en servicios de terceros</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 6 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="600">
+                        <h2><i class="fas fa-exclamation-triangle me-2"></i>6. Limitación de Responsabilidad</h2>
+                        
+                        <h3>Garantías:</h3>
+                        <ul>
+                            <li>Proporcionamos nuestros servicios "tal cual" y "según disponibilidad"</li>
+                            <li>No garantizamos que nuestros servicios sean ininterrumpidos, libres de errores o completamente seguros</li>
+                            <li>No garantizamos resultados específicos de negocio o comerciales</li>
+                        </ul>
+
+                        <h3>Limitación de Daños:</h3>
+                        <ul>
+                            <li>En ningún caso Manakin Labs será responsable de daños indirectos, incidentales, especiales o consecuentes</li>
+                            <li>Nuestra responsabilidad total no excederá el monto total pagado por el cliente en los últimos 12 meses</li>
+                            <li>No somos responsables de pérdida de datos, ingresos, beneficios o oportunidades comerciales</li>
+                        </ul>
+
+                        <h3>Excepciones:</h3>
+                        <p>Estas limitaciones no se aplican en casos de negligencia grave, fraude o violación intencional de estos términos.</p>
+                    </div>
+
+                    <!-- Sección 7 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="700">
+                        <h2><i class="fas fa-ban me-2"></i>7. Terminación</h2>
+                        
+                        <h3>Terminación por el Cliente:</h3>
+                        <ul>
+                            <li>El cliente puede terminar un proyecto con aviso previo por escrito</li>
+                            <li>El cliente es responsable del pago de todos los servicios prestados hasta la fecha de terminación</li>
+                            <li>Los materiales entregados hasta la fecha de terminación pertenecen al cliente</li>
+                        </ul>
+
+                        <h3>Terminación por Manakin Labs:</h3>
+                        <p>Podemos terminar o suspender su acceso inmediatamente, sin previo aviso, si:</p>
+                        <ul>
+                            <li>Usted viola estos términos de servicio</li>
+                            <li>No realiza los pagos requeridos</li>
+                            <li>Utiliza nuestros servicios de manera ilegal o no autorizada</li>
+                            <li>Hay una solicitud gubernamental o legal</li>
+                        </ul>
+
+                        <h3>Efectos de la Terminación:</h3>
+                        <ul>
+                            <li>El acceso a los servicios se suspenderá inmediatamente</li>
+                            <li>Los datos pueden ser eliminados después de un período de gracia razonable</li>
+                            <li>Las obligaciones de pago pendientes permanecen vigentes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 8 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="800">
+                        <h2><i class="fas fa-sync-alt me-2"></i>8. Modificaciones de los Términos</h2>
+                        <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en nuestro sitio web.</p>
+                        <p>Es su responsabilidad revisar periódicamente estos términos. El uso continuado de nuestros servicios después de las modificaciones constituye su aceptación de los nuevos términos.</p>
+                        
+                        <div class="contact-box">
+                            <p><strong>Notificaciones Importantes:</strong> Notificaremos cambios significativos por correo electrónico o mediante un aviso prominente en nuestro sitio web.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sección 9 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="900">
+                        <h2><i class="fas fa-gavel me-2"></i>9. Ley Aplicable y Jurisdicción</h2>
+                        <p>Estos términos se rigen por las leyes de la República de Costa Rica. Cualquier disputa relacionada con estos términos será resuelta en los tribunales competentes de Costa Rica.</p>
+                        <p>Si alguna disposición de estos términos se considera inválida o inaplicable, las disposiciones restantes permanecerán en pleno vigor y efecto.</p>
+                    </div>
+
+                    <!-- Sección 10 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="1000">
+                        <h2><i class="fas fa-envelope me-2"></i>10. Contacto</h2>
+                        <p>Si tiene preguntas sobre estos Términos de Servicio, puede contactarnos:</p>
+                        
+                        <div class="row g-4 mt-3">
+                            <div class="col-md-6">
+                                <div class="contact-box">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-at me-2"></i>Correos</h3>
+                                    <p><strong>General:</strong> <a href="mailto:dajosava@gmail.com">dajosava@gmail.com</a></p>
+                                    <p><strong>Legal:</strong> <a href="mailto:manakinlabs@gmail.com">manakinlabs@gmail.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="contact-box">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-phone me-2"></i>Contacto</h3>
+                                    <p><strong>Teléfono:</strong> +506 70142848</p>
+                                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/50670142848">+506 70142848</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="contact-box">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-map-marker-alt me-2"></i>Ubicación</h3>
+                                    <p><strong>Dirección:</strong> Hojancha, Guanacaste, Costa Rica 🇨🇷</p>
+                                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/manakin_labs/" target="_blank">@manakin_labs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer de Términos -->
+                    <div class="privacy-section text-center" data-aos="fade-up" data-aos-delay="1100">
+                        <p style="color: var(--muted-text); margin-bottom: 1rem;">© <span id="current-year"></span> Manakin Labs. Todos los derechos reservados.</p>
+                        <p style="color: var(--muted-text);">Al utilizar nuestros servicios, usted reconoce haber leído, entendido y aceptado estos Términos de Servicio.</p>
+                        <p style="color: var(--muted-text); margin-top: 1rem;">
+                            <a href="politicas-privacidad.html" style="color: var(--primary-green); text-decoration: none;">Ver Políticas de Privacidad</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/50670142848?text=Hola%2C%20tengo%20una%20consulta%20sobre%20los%20términos%20de%20servicio." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        // Esperar a que todo cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                // Initialize AOS si está disponible
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        easing: 'ease-out-cubic',
+                        once: true,
+                        offset: 100
+                    });
+                }
+                
+                // Smooth scroll para enlaces
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+                
+                // Inicializar año actual en el footer
+                initCurrentYear();
+            } catch (error) {
+                console.error('Error inicializando scripts:', error);
+            }
+        });
+        
+        // Función para actualizar el año automáticamente en el footer
+        function initCurrentYear() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        }
+    </script>
+</body>
+</html>

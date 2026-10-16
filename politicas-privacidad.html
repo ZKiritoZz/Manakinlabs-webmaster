@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Políticas de Privacidad - Manakin Labs</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-Q8wNkFqTRRYZ381gIsTKM2K3X1b4wbtawDeJJfJtuUI=' 'sha256-TyR6IOxHwHQJ3+DYRg5Uy7EE/AEx50o80X7NkGy+lTU=' 'sha256-puQafBKD5KGNykSh3i5m2IBWgS9TkIyzcPY6Z6RLMrQ=' 'sha256-qYt2VaU2jNGMVro/w4jw1rQndPHqVzcsb8yPsnxbCtY=' 'sha256-hUUX/IP5OoG4HjayLAYygnG7htWOiaJb3c+bgMFHW5E=' 'sha256-PTFgla6CTEX+DB4/ZBgBX1ZTrmZlcogTNEP+YrZwJxo=' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://cdn.jsdelivr.net https://webhook.n8.manakinlabs.com https://n8.manakinlabs.com https://wa.me https://www.googletagmanager.com https://www.google-analytics.com; frame-src 'self' https://webhook.n8.manakinlabs.com https://n8.manakinlabs.com; base-uri 'self'; form-action 'self' https://wa.me; worker-src 'self' blob:; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- Favicon optimizado -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#0A0E27">
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Estilos básicos de respaldo */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Fallback si las variables CSS no cargan */
+        :root {
+            --dark-bg: #0A0E27;
+            --card-bg: rgba(20, 25, 50, 0.8);
+            --primary-green: #00C853;
+            --secondary-green: #00B8D4;
+            --white: #FFFFFF;
+            --light-text: #E0E0E0;
+            --muted-text: #9E9E9E;
+            --transition-normal: all 0.3s ease;
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.3);
+            --font-secondary: 'Poppins', sans-serif;
+        }
+        
+        /* Asegurar que el contenedor sea visible */
+        .content-wrapper {
+            display: block !important;
+            visibility: visible !important;
+        }
+        
+        /* Estilos para privacy-section */
+        .privacy-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-normal);
+        }
+        
+        .privacy-section:hover {
+            box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 200, 83, 0.1);
+            border-color: rgba(0, 200, 83, 0.2);
+        }
+        
+        .privacy-section h2 {
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-secondary);
+        }
+        
+        .privacy-section h3 {
+            color: var(--secondary-green);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+        }
+        
+        .privacy-section p {
+            color: var(--light-text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-section ul {
+            color: var(--light-text);
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+        
+        .privacy-section strong {
+            color: var(--white);
+        }
+        
+        .privacy-header {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(0, 184, 212, 0.1) 100%);
+            border: 1px solid rgba(0, 200, 83, 0.2);
+            margin-bottom: 3rem;
+        }
+        
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            font-family: var(--font-secondary);
+        }
+        
+        .privacy-header .update-date {
+            color: var(--muted-text);
+            font-size: 0.95rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: var(--transition-normal);
+            box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 200, 83, 0.5);
+            color: var(--white);
+        }
+        
+        .content-wrapper {
+            padding: 140px 0 80px;
+            min-height: 100vh;
+            background: var(--dark-bg);
+        }
+        
+        .contact-box {
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-box p {
+            margin: 0;
+            color: var(--white);
+        }
+        
+        .contact-box a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17717129679"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17717129679');
+    </script>
+</head>
+<body>
+    <!-- Navbar Premium -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/manakinbird.png" alt="Manakin Labs" class="brand-logo">
+                Manakin <span class="brand-highlight">Labs</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="index.html" class="btn btn-primary-custom">
+                            <i class="fas fa-arrow-left me-2"></i>Volver
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Header -->
+                    <div class="privacy-header" data-aos="fade-up">
+                        <h1><i class="fas fa-shield-alt me-3"></i>Políticas de Privacidad</h1>
+                        <p class="update-date">Última actualización: 9 de frebrero de 2026</p>
+                    </div>
+
+                    <!-- Sección 1 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="100">
+                        <h2><i class="fas fa-building me-2"></i>1. Quiénes Somos</h2>
+                        <p><strong>Manakin Labs</strong> es una agencia de desarrollo de software especializada en soluciones tecnológicas a medida, automatización e inteligencia artificial, incluyendo:</p>
+                        <ul>
+                            <li>Aplicaciones de automatización para redes sociales (Instagram y Facebook)</li>
+                            <li>Agentes de IA para WhatsApp</li>
+                            <li>Integraciones con Google Workspace (Gmail, Calendar, Sheets, Docs)</li>
+                            <li>Automatización de procesos empresariales</li>
+                        </ul>
+                        
+                        <div class="contact-box">
+                            <p>Para consultas sobre privacidad: <a href="mailto:manakinlabs@gmail.com">manakinlabs@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Sección 2 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="200">
+                        <h2><i class="fas fa-database me-2"></i>2. Datos que Procesamos</h2>
+                        <p>A través de las APIs de Meta (Facebook/Instagram) y WhatsApp procesamos los siguientes tipos de datos:</p>
+                        
+                        <h3>Datos de Meta (Facebook/Instagram):</h3>
+                        <ul>
+                            <li><strong>Identificadores de cuenta:</strong> User IDs de Instagram y Facebook</li>
+                            <li><strong>Nombre de usuario:</strong> Usernames de las plataformas</li>
+                            <li><strong>Medios:</strong> IDs de posts, captions, URLs de imágenes y videos</li>
+                            <li><strong>Métricas:</strong> Datos de engagement, reach y estadísticas</li>
+                            <li><strong>Tokens de acceso:</strong> Para autenticación y autorización</li>
+                        </ul>
+
+                        <h3>Datos de WhatsApp (para Agentes de IA):</h3>
+                        <ul>
+                            <li><strong>Números de teléfono:</strong> Identificadores únicos de usuarios de WhatsApp</li>
+                            <li><strong>Nombres de perfil:</strong> Nombres asociados a las cuentas de WhatsApp</li>
+                            <li><strong>Mensajes:</strong> Contenido de mensajes de texto intercambiados con los agentes de IA</li>
+                            <li><strong>Multimedia:</strong> Imágenes, videos, documentos y audios compartidos a través de WhatsApp</li>
+                            <li><strong>Metadatos de conversación:</strong> Timestamps, estado de entrega y lectura de mensajes</li>
+                            <li><strong>Datos de perfil de negocio:</strong> Información del perfil comercial de WhatsApp Business asociado</li>
+                            <li><strong>Tokens de acceso API:</strong> Credenciales para la integración con WhatsApp Business API</li>
+                        </ul>
+
+                        <h3>Datos de Google Workspace (Gmail, Calendar, Sheets, Docs):</h3>
+                        <p>Cuando utilizas nuestros servicios que integran herramientas de Google Workspace, procesamos los siguientes datos a través de las APIs de Google:</p>
+                        <ul>
+                            <li><strong>Gmail:</strong>
+                                <ul>
+                                    <li>Direcciones de correo electrónico (remitentes y destinatarios)</li>
+                                    <li>Asuntos y contenido de mensajes de correo electrónico</li>
+                                    <li>Adjuntos y archivos compartidos por correo</li>
+                                    <li>Metadatos de correo (fechas, etiquetas, carpetas)</li>
+                                    <li>Tokens de acceso OAuth para autenticación</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Calendar:</strong>
+                                <ul>
+                                    <li>Información de eventos (títulos, descripciones, fechas, horarios)</li>
+                                    <li>Participantes e invitados a eventos</li>
+                                    <li>Ubicaciones y recordatorios de eventos</li>
+                                    <li>Configuraciones de calendario y disponibilidad</li>
+                                    <li>Tokens de acceso OAuth para autenticación</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Sheets:</strong>
+                                <ul>
+                                    <li>Contenido de hojas de cálculo y datos almacenados</li>
+                                    <li>Formulas, formatos y configuraciones de celdas</li>
+                                    <li>Metadatos de archivos (nombres, fechas de modificación)</li>
+                                    <li>Permisos y colaboradores de hojas de cálculo</li>
+                                    <li>Tokens de acceso OAuth para autenticación</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Docs:</strong>
+                                <ul>
+                                    <li>Contenido de documentos de texto</li>
+                                    <li>Formato, imágenes y elementos multimedia incluidos</li>
+                                    <li>Metadatos de archivos (nombres, fechas de modificación)</li>
+                                    <li>Permisos y colaboradores de documentos</li>
+                                    <li>Tokens de acceso OAuth para autenticación</li>
+                                </ul>
+                            </li>
+                            <li><strong>Datos de Autenticación Google:</strong>
+                                <ul>
+                                    <li>ID de cuenta de Google</li>
+                                    <li>Dirección de correo electrónico asociada</li>
+                                    <li>Nombre y foto de perfil (si está disponible)</li>
+                                    <li>Tokens de acceso y refresh tokens OAuth 2.0</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Datos Operativos:</h3>
+                        <ul>
+                            <li><strong>Logs operativos:</strong> Registros de actividad y errores del sistema</li>
+                            <li><strong>Datos de soporte:</strong> Correo electrónico, nombre y consultas de soporte</li>
+                        </ul>
+
+                        <h3>Información Técnica:</h3>
+                        <ul>
+                            <li>Dirección IP</li>
+                            <li>Tipo de navegador y dispositivo</li>
+                            <li>Páginas visitadas en nuestro sitio web</li>
+                            <li>Tiempo de permanencia en el sitio</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 3 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="300">
+                        <h2><i class="fas fa-bullseye me-2"></i>3. Fines del Procesamiento</h2>
+                        
+                        <h3>Agentes de IA con WhatsApp:</h3>
+                        <ul>
+                            <li>Proporcionar asistencia automática e inteligente a través de WhatsApp</li>
+                            <li>Procesar y responder consultas de clientes de manera contextualizada</li>
+                            <li>Gestionar conversaciones de manera conversacional y natural</li>
+                            <li>Automatizar tareas y acciones basadas en las interacciones del usuario</li>
+                            <li>Mejorar la experiencia del cliente con respuestas rápidas y precisas</li>
+                            <li>Analizar conversaciones para optimizar el rendimiento de los agentes</li>
+                        </ul>
+
+                        <h3>Automatización de Contenido:</h3>
+                        <ul>
+                            <li>Automatizar publicaciones y gestión de contenido</li>
+                            <li>Programar posts y contenido multimedia</li>
+                            <li>Gestionar múltiples cuentas de redes sociales</li>
+                            <li>Optimizar horarios de publicación</li>
+                        </ul>
+
+                        <h3>Integración con Google Workspace:</h3>
+                        <ul>
+                            <li><strong>Gmail:</strong>
+                                <ul>
+                                    <li>Automatizar el envío y recepción de correos electrónicos</li>
+                                    <li>Gestionar respuestas automáticas y filtrado de mensajes</li>
+                                    <li>Integrar comunicaciones por correo con otros sistemas</li>
+                                    <li>Procesar y analizar contenido de correos para automatización</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Calendar:</strong>
+                                <ul>
+                                    <li>Gestionar y sincronizar eventos y citas</li>
+                                    <li>Automatizar la creación y actualización de eventos</li>
+                                    <li>Enviar recordatorios y notificaciones de eventos</li>
+                                    <li>Coordinar calendarios entre múltiples usuarios</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Sheets:</strong>
+                                <ul>
+                                    <li>Leer y escribir datos en hojas de cálculo</li>
+                                    <li>Automatizar la actualización de datos y reportes</li>
+                                    <li>Generar análisis y visualizaciones de datos</li>
+                                    <li>Integrar datos de hojas de cálculo con otros sistemas</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Docs:</strong>
+                                <ul>
+                                    <li>Crear y editar documentos de forma automatizada</li>
+                                    <li>Generar reportes y documentos personalizados</li>
+                                    <li>Gestionar colaboración y permisos de documentos</li>
+                                    <li>Integrar contenido de documentos con otros servicios</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Soporte y Mejora del Servicio:</h3>
+                        <ul>
+                            <li>Proporcionar soporte técnico y mantenimiento</li>
+                            <li>Mejorar la funcionalidad y rendimiento de la aplicación</li>
+                            <li>Desarrollar nuevas características</li>
+                            <li>Optimizar nuestros procesos internos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 4 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="400">
+                        <h2><i class="fas fa-lock me-2"></i>4. Cómo Protegemos tus Datos</h2>
+                        
+                        <h3>Medidas Técnicas:</h3>
+                        <ul>
+                            <li><strong>TLS (Transport Layer Security):</strong> Encriptación de datos en tránsito</li>
+                            <li><strong>Control de Accesos:</strong> Controles estrictos de acceso</li>
+                            <li><strong>Cifrado:</strong> Todos los datos se cifran durante la transmisión</li>
+                            <li><strong>Backups Seguros:</strong> Copias de seguridad cifradas</li>
+                            <li><strong>Hardening:</strong> Medidas de endurecimiento de seguridad</li>
+                            <li><strong>Autenticación OAuth 2.0:</strong> Uso de tokens de acceso seguros y con expiración para servicios de Google</li>
+                            <li><strong>Alcance Limitado de Permisos:</strong> Solicitamos solo los permisos mínimos necesarios para cada servicio de Google</li>
+                            <li><strong>Revocación de Acceso:</strong> Los usuarios pueden revocar el acceso a sus datos de Google en cualquier momento desde su cuenta de Google</li>
+                        </ul>
+
+                        <h3>Medidas Organizacionales:</h3>
+                        <ul>
+                            <li><strong>Capacitación del Personal:</strong> Formación regular en seguridad</li>
+                            <li><strong>Políticas Internas:</strong> Manejo estricto de información</li>
+                            <li><strong>Auditorías Regulares:</strong> Revisiones periódicas de seguridad</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 5 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="500">
+                        <h2><i class="fas fa-user-check me-2"></i>5. Tus Derechos</h2>
+                        <p>Tienes los siguientes derechos respecto a tus datos personales:</p>
+                        
+                        <ul>
+                            <li><strong>Acceder</strong> a tus datos personales</li>
+                            <li><strong>Rectificar</strong> información inexacta o incompleta</li>
+                            <li><strong>Oponerte</strong> al procesamiento de tus datos</li>
+                            <li><strong>Portabilidad</strong> de tus datos en formato estructurado</li>
+                            <li><strong>Eliminar</strong> tus datos personales</li>
+                        </ul>
+
+                        <h3>Derecho de Eliminación (Facebook/Instagram):</h3>
+                        <p>Para solicitar la eliminación de tus datos:</p>
+                        <ul>
+                            <li>Visita <strong>https://manakinlabs.com/data-deletion</strong> y completa la solicitud</li>
+                            <li>O escribe a <strong>manakinlabs@gmail.com</strong> con asunto "Data Deletion – IG/FB"</li>
+                        </ul>
+
+                        <h3>Derecho de Eliminación (WhatsApp):</h3>
+                        <p>Para solicitar la eliminación de tus datos de WhatsApp procesados por nuestros agentes de IA:</p>
+                        <ul>
+                            <li>Visita <strong>https://manakinlabs.com/data-deletion</strong> y completa la solicitud especificando "WhatsApp"</li>
+                            <li>O escribe a <strong>manakinlabs@gmail.com</strong> con asunto "Data Deletion – WhatsApp"</li>
+                            <li>Incluye tu número de teléfono asociado a la cuenta de WhatsApp para procesar tu solicitud</li>
+                        </ul>
+
+                        <h3>Derecho de Eliminación (Google Workspace - Gmail, Calendar, Sheets, Docs):</h3>
+                        <p>Para solicitar la eliminación de tus datos de Google Workspace procesados por nuestros servicios:</p>
+                        <ul>
+                            <li><strong>Revocación Inmediata de Acceso:</strong> Puedes revocar el acceso de nuestra aplicación a tus datos de Google en cualquier momento desde tu cuenta de Google:
+                                <ul>
+                                    <li>Visita <strong>https://myaccount.google.com/permissions</strong></li>
+                                    <li>Busca "Manakin Labs" o el nombre de nuestra aplicación</li>
+                                    <li>Haz clic en "Eliminar acceso" o "Revoke access"</li>
+                                </ul>
+                            </li>
+                            <li><strong>Solicitud de Eliminación de Datos Almacenados:</strong> Para solicitar la eliminación de datos que hayamos almacenado localmente:
+                                <ul>
+                                    <li>Visita <strong>https://manakinlabs.com/data-deletion</strong> y completa la solicitud especificando "Google Workspace"</li>
+                                    <li>O escribe a <strong>manakinlabs@gmail.com</strong> con asunto "Data Deletion – Google Workspace"</li>
+                                    <li>Incluye tu dirección de correo electrónico de Google asociada para procesar tu solicitud</li>
+                                    <li>Especifica qué servicios de Google (Gmail, Calendar, Sheets, Docs) deseas que eliminemos</li>
+                                </ul>
+                            </li>
+                            <li><strong>Nota Importante:</strong> Al revocar el acceso, nuestra aplicación dejará de poder acceder a tus datos de Google, pero los datos originales permanecen en tu cuenta de Google. Solo eliminamos los datos que hayamos almacenado en nuestros sistemas.</li>
+                        </ul>
+                        
+                        <div class="contact-box">
+                            <p><strong>Tiempo de Respuesta:</strong> Máximo 30 días hábiles para todas las solicitudes de eliminación</p>
+                            <p><strong>Revocación de Acceso:</strong> La revocación de acceso desde tu cuenta de Google es inmediata y efectiva de forma instantánea</p>
+                        </div>
+                    </div>
+
+                    <!-- Sección 6 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="600">
+                        <h2><i class="fas fa-share-alt me-2"></i>6. Compartir Información</h2>
+                        <p><strong>No vendemos datos.</strong> No vendemos, alquilamos ni compartimos tu información personal con terceros, excepto:</p>
+                        
+                        <ul>
+                            <li><strong>Con tu Consentimiento:</strong> Solo con autorización explícita</li>
+                            <li><strong>Encargados de Procesamiento:</strong> Infraestructura cloud bajo contrato</li>
+                            <li><strong>Proveedores de Servicios:</strong> Google LLC (para servicios de Google Workspace) bajo los términos de uso de Google Cloud Platform y Google APIs</li>
+                            <li><strong>Requisitos Legales:</strong> Cuando lo requiera la ley</li>
+                        </ul>
+                        
+                        <div class="contact-box mt-3">
+                            <p><strong>Información sobre Google:</strong> Cuando utilizas nuestros servicios que integran Google Workspace, tu información también está sujeta a las <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Políticas de Privacidad de Google</a> y los <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Términos de Servicio de Google API</a>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sección 7 -->
+                    <div class="privacy-section" data-aos="fade-up" data-aos-delay="700">
+                        <h2><i class="fas fa-envelope me-2"></i>7. Contacto</h2>
+                        <p>Si tienes preguntas sobre esta política de privacidad:</p>
+                        
+                        <div class="row g-4 mt-3">
+                            <div class="col-md-6">
+                                <div class="contact-box">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-at me-2"></i>Correos</h3>
+                                    <p><strong>Privacidad:</strong> <a href="mailto:manakinlabs@gmail.com">manakinlabs@gmail.com</a></p>
+                                    <p><strong>General:</strong> <a href="mailto:dajosava@gmail.com">dajosava@gmail.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="contact-box">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-phone me-2"></i>Contacto</h3>
+                                    <p><strong>Teléfono:</strong> +506 70142848</p>
+                                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/50670142848">+506 70142848</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="contact-box">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-map-marker-alt me-2"></i>Ubicación</h3>
+                                    <p><strong>Dirección:</strong> Hojancha, Guanacaste, Costa Rica 🇨🇷</p>
+                                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/manakin_labs/" target="_blank">@manakin_labs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer de Políticas -->
+                    <div class="privacy-section text-center" data-aos="fade-up" data-aos-delay="800">
+                        <p style="color: var(--muted-text); margin-bottom: 1rem;">© <span id="current-year"></span> Manakin Labs. Todos los derechos reservados.</p>
+                        <p style="color: var(--muted-text);">Estamos comprometidos con la protección de tu privacidad y el cumplimiento de las regulaciones de protección de datos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/50670142848?text=Hola%2C%20tengo%20una%20consulta%20sobre%20privacidad." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
+    <script>
+        // Esperar a que todo cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                // Initialize AOS si está disponible
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        easing: 'ease-out-cubic',
+                        once: true,
+                        offset: 100
+                    });
+                }
+                
+                // Smooth scroll para enlaces
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+                
+                // Inicializar año actual en el footer
+                initCurrentYear();
+            } catch (error) {
+                console.error('Error inicializando scripts:', error);
+            }
+        });
+        
+        // Función para actualizar el año automáticamente en el footer
+        function initCurrentYear() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        }
+    </script>
+</body>
+</html>
